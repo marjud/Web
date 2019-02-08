@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let sum = 0, list = [1, 2, 3, 4, 5];
+        list.forEach(i => sum += i);
+        console.log(sum);
+    </script>
+    <script>
+        let y = [3, 4, 6, 4, 2, 9];
+        y = y.map((num) => num + 1);
+        console.log("map: " + y);
+    </script>
+        
+    <script>
+        let mList = [4, 5, 6, 7, 8, 9, 10];
+        console.log("filer: " + mList.filter(i => i> 4));
+    </script>
+    <script>
+        let x = ['a', 'b', 'c', 'd'];
+        x.map(adder => {
+            console.log(adder)
+            return adder + "1";
+        })
+        .map(adder =>{
+            console.log(adder);
+            return adder + "2"
+        })
+        .forEach(adder => console.log(adder))
+    </script>
+    
+<title>Page Title</title>
+    <script src ="JS/challenge8.js"></script>
+    
+</head>
+<body>
+    <div>
+  
+    
+    
+    </div>
+
+    <div id="parent">
+   
+
+    
+    <ul id = "heroes">
+        <li id = "powers">
+        
+        </li>
+        
+    </ul>
+   
+    
+</div>
+
+
+</body>
+</html>

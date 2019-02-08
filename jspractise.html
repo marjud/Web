@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="JS/challenge3.js"></script>
+        <script src="JS/challenge3.2.js"></script>
+        <script src="JS/challenge3.3.js"></script>
+        <script src="JS/challenge4.js"></script>
+        <script src="JS/challenge7.js"></script>
+        <script>addstring();</script>
+        <script>ageFinder();</script>
+        <script>ptag();</script>
+        <script>changeHeader();</script>
+        <script>removeP();</script>
+    </head>
+    <body>
+    <p>Before the script</p>
+        <form>
+            <input type="text" id ="inputbox" placeholder="input stuff to the array">
+            <input type="text" id ="changeP" placeholder="input text to change p">
+        </form>
+    
+
+        
+    
+        <h1 id ="task7">Header</h1>
+        <script>
+            function addP(){
+                document.getElementById("demo")
+                .innerHTML = "Hello world";
+            }
+        </script>
+        
+        <script>
+            function changeheader(){
+                let element = document.getElementById("task7");
+                element.innerHTML = "New Heading";
+            }
+        </script>
+        <script>
+            function changeP(){
+                let input = document.getElementById("changeP");
+                let p = document.createElement('p');
+                p.innerHTML = input.value;
+                document.getElementById("addtext").appendChild(p);                
+            }
+        </script>
+        <script>
+            function removeP(){
+                let p = document.getElementById("addtext");
+                document.getElementById("parent").removeChild(p);
+                }
+        </script>
+        
+        
+    <div id="parent">
+        
+        <p id ="addtext"></p>  
+        <p id = "demo"></p>
+         
+    </div>   
+    <input id="chngebtn" type="button" onclick="removeP()" value="Delete"/>  
+    <input id="chngebtn" type="button" onclick="changeP()" value="add paragraph from textBox"/>     
+    <input type="button" onclick="addP()" value="add text"/> 
+    <input type="button" onclick="changeheader()" value="change header"/>   
+    <input type="button" onclick="addToArray()" value="add to array"/>
+    <input type="button" onclick="removeFromArray()" value="remove from array"/>
+    <input type="button" onclick="annoyingPopup()" value="annoying button"/>
+    <input type="button" onclick="toUpperCase()" value="toUpperCase"/>
+    </body>
+</html> 

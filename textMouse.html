@@ -1,0 +1,67 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #parent{
+            width: 100%;
+            height: 100%;
+        }
+        #followText{
+            position: absolute;
+            float: left;
+            width: 60px;
+            height: 60px;
+            background: none;
+        }
+        
+
+
+    </style>
+    
+    
+    <script>
+        function clear(){
+        document.getElementById("clear").innerHTML("");
+        }
+        
+    </script>
+    
+<title>Funky Mouse</title>
+    
+</head>
+<body>
+    <input type="text" id="changeMouse" placeholder = "Input new text"/>
+        <p id="clear"></p>
+        <p id="followText">Judah</p>
+    <div id="parent" >
+    </div>
+    <script>
+        
+        document.getElementById("parent").addEventListener("mousemove", function(event) {
+        trackMouse(event);
+        });   
+        
+        let str = document.getElementById("followText").textContent;
+        
+        
+             
+        function trackMouse(e){
+            let x = e.clientX;
+            let y = e.clientY;
+            let coord = "Coordinates: ("+ x +"," + y +")";
+            document.getElementById("clear").innerHTML = coord;
+            let text = document.getElementById("followText");
+            console.log(text)
+            text.style.left = x+"px";
+            text.style.top = y + "px";
+         }
+        
+  
+      
+        
+    </script>
+
+
+
+</body>
+</html>
